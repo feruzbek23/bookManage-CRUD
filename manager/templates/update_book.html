@@ -1,10 +1,11 @@
+{% extends 'home.html'%}
 {% load static %}
 
 <link rel="stylesheet" type="text/css" href="{% static '/css/update_book.css' %}">
 
 <form class=form-text method="POST" action="">
-    <h1>Update</h1>
+    <h1>Library</h1>
     {% csrf_token %}
     <b>{{form.as_p}}</b>
-    <input type="submit" value="Update">
+    <button type="submit" class="btn btn-primary active">Update</button>
 </form>

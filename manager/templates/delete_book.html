@@ -1,9 +1,29 @@
-<p>Are you do you want to delete {{books}}?</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Delete Book</title>
+</head>
+<body>
+    <div class="container mt-5">
+        <h2 class="text-center">Delete Book</h2>
+        <form action="" method="POST">
+            {% csrf_token %}
+            <div class="alert alert-danger" role="alert">
+               <p>Are you sure you want to delete the book "{{ books }}"?</p>
+            </div>
+            <button type="submit" class="btn btn-danger">Delete</button>
+            <a href="{% url 'books' %}" class="btn btn-secondary">Cancel</a>
+        </form>
+    </div>
 
-<a href="{% url 'books' %}">Cancel</a>
-
-<form method="POST" action="">
-
-    {% csrf_token %}
-    <input type="submit" value="Confirm">
-</form>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+</body>
+</html>
+    
+    

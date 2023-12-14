@@ -3,9 +3,10 @@ from . import views
 
 
 urlpatterns = [
-    path('', views.BookList, name="books"),
+    path('', views.BooksApi.as_view(), name="books"),
     path('update_book/<int:id>', views.BookUpdate, name='update_book'),
     path('delete_book/<int:id>', views.BookDelete, name='delete_book'),
+    
     
 
 ]
