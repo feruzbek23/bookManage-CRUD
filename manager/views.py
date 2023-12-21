@@ -1,11 +1,7 @@
 from django.shortcuts import render,redirect
 from .models import BooksModel
 from .forms import BooksForm
-from .serializer import BooksSerializer
-from rest_framework.renderers import TemplateHTMLRenderer
-from rest_framework.response import Response
-from rest_framework.views import APIView
-from django.shortcuts import get_object_or_404
+
 
 # Create your views here.
 
